@@ -41,7 +41,7 @@ function setup() {
 
   playPauseButton = createButton('Play/Pause');
   playPauseButton.position(width - 2*playPauseButton.size().width, height - 2*playPauseButton.size().height);
-  playPauseButton.mousePressed(togglePlayPause);
+  playPauseButton.keyPressed(togglePlayPause);
   stepButton = createButton("Step");
   stepButton.position(2*stepButton.size().width, height - 2*stepButton.size().height);
   stepButton.mousePressed(stepSoundLoop)
