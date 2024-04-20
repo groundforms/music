@@ -35,16 +35,14 @@ function setup() {
   textSize(15);
   generatingTokenColor = color(200,250,255);
   newTokenColor  = color(240);
-
   synth = new p5.PolySynth();
   sloop = new p5.SoundLoop(soundLoop, 0.7);
-
-  playPauseButton = createButton('Play/Pause');
-  playPauseButton.position(width - 2*playPauseButton.size().width, height - 2*playPauseButton.size().height);
-  playPauseButton.mousePressed(togglePlayPause);
   stepButton = createButton("Step");
   stepButton.position(2*stepButton.size().width, height - 2*stepButton.size().height);
   stepButton.mousePressed(stepSoundLoop)
+  playPauseButton = createButton('Play/Pause');
+  playPauseButton.position(width - 2*playPauseButton.size().width, height - 2*playPauseButton.size().height);
+  playPauseButton.keypressed(togglePlayPause);
 }
 
 function soundLoop(cycleStartTime) {
